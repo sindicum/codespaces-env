@@ -1,7 +1,10 @@
 # Git 超入門ハンズオン
 
-このリポジトリ（codespaces-env）を使って、Git の基本操作を手を動かしながら覚えるためのメモです。
-コマンドはすべて Codespaces のターミナルで実行します。
+テンプレートから作った自分の `codespaces-env` リポジトリを使って、Git の基本操作を手を動かしながら覚えるための資料です。
+
+> 前提
+> - [README](../../README.md) の「使い始め方」に沿って、自分のリポジトリと Codespace を作ってある
+> - コマンドはすべて Codespace のターミナルで実行する（ターミナルが見当たらなければ `Ctrl + Shift + @` で開く）
 
 
 ## 0. まず覚える言葉
@@ -42,9 +45,10 @@ git log --oneline
 > 付けずに `git log` だけだと、作成者や日時も含めて1件が何行にもなります。
 >
 > ```
-> ef5e82c devcontainerをNode.js+pnpmとPython+uvの最小構成に変更し、READMEを更新
-> e4389dc devcontainer.jsonを修正し、README.mdに認証方法を記載
+> 3f2a9c1 Initial commit
 > ```
+>
+> テンプレートから作ったリポジトリは、元のリポジトリの履歴を引き継がず、この「Initial commit」1件から始まります。コミット ID（先頭の英数字）は人によって違います。
 >
 > ログが長くて画面が止まったように見えたら **`q` キーで閉じられます**（上下の移動は矢印キー）。
 
@@ -57,6 +61,8 @@ git log --oneline
 git switch -c practice/自分の名前
 # 例: git switch -c practice/taro
 ```
+
+> 💡 ブランチ名に自分の名前を入れておくと、チームで同じリポジトリを使うときに誰のブランチか分かります。名前は半角英数字にしておくと扱いやすいです。
 
 > 💡 `-c` は **create（作成）** の略で、「新しいブランチを作って、そこに移動する」という意味です。
 >
@@ -134,16 +140,18 @@ git push -u origin practice/自分の名前
 2回目以降は `git push` だけで OK です。
 Codespaces では GitHub の認証が済んでいるので、パスワード入力は不要です。
 
-GitHub のリポジトリページを開くと、ブランチが増えているのが確認できます。
+GitHub で自分のリポジトリのページを開くと、ブランチが増えているのが確認できます。
 
 
 ## 7. プルリクエスト（PR）を作る（任意）
 
 GitHub 上で「このブランチの変更を main に取り込んでください」と依頼する仕組みです。
 
-1. GitHub のリポジトリページを開く
+1. GitHub で自分のリポジトリのページを開く
 2. 表示される「Compare & pull request」ボタンを押す
-3. タイトルと説明を書いて「Create pull request」
+   - ボタンが出ていなければ、「Pull requests」タブ →「New pull request」で、compare に練習用ブランチを選ぶ
+3. 取り込み先（base）が自分のリポジトリの `main` になっていることを確かめる
+4. タイトルと説明を書いて「Create pull request」
 
 練習なので、作った PR はマージせずに「Close pull request」で閉じて構いません。
 
