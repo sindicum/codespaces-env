@@ -34,3 +34,8 @@
 ## 環境変数の扱い
 - 秘密情報（トークン・APIキー・DB パスワード等）はCodespaces Secrets（GitHub 設定画面）に保存すること。
 - チームで共有してよい設定値（NODE_ENV、TZなど）は、`.devcontainer/devcontainer.json` の containerEnvに保存（リビルドは必要）。
+
+## ハンズオン
+- `docs/handson/`に、この環境で手を動かしながら学ぶためのメモを置いている。上から順に進める
+  - [Git 超入門ハンズオン](docs/handson/git-handson.md)：このリポジトリを使って、branch / add / commit / push などGitの基本操作を覚える
+  - [Claude Code 超入門ハンズオン](docs/handson/claude-code-handson.md)：Claude Codeに指示を出しながら、Next.js + MapLibre GL JSで地図に図形を描けるWeb-GISアプリを作る
