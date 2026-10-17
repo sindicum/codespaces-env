@@ -65,7 +65,17 @@ Codespaceの中身は`.devcontainer/devcontainer.json`で決まっています�
 
 ### カスタマイズ
 - Dockerは含まれていない。DB等をコンテナで動かす場合は`features`に`"ghcr.io/devcontainers/features/docker-in-docker:2": {}`を追加する
-- `devcontainer.json`を変更したら、コマンドパレットから「Codespaces: Rebuild Container」を実行して反映する
+- `devcontainer.json`を変更したら、下の「リビルドのやり方」でCodespaceを作り直して反映する
+
+### リビルドのやり方
+1. コマンドパレットを開く
+   - Mac：`Command + Shift + P`
+   - Windows / Linux：`Ctrl + Shift + P`
+   - ブラウザのショートカットと重なって開かないときは`F1`、または画面左下の「Codespaces」をクリック
+2. `rebuild`と入力し、「Codespaces: Rebuild Container」を選ぶ
+3. 確認が出たら「Rebuild」を押す。数分待つと、新しい設定でCodespaceが開き直る
+
+> 作業中のファイルは`/workspaces/`の中にあれば消えません。ただし、`/workspaces/`の外にインストールしたものや置いたファイルは消えます。
 
 ## 環境変数の扱い
 - 秘密情報（トークン・APIキー・DBパスワード等）は、Codespaces secrets（GitHubの設定画面）に保存する
