@@ -79,7 +79,7 @@ git branch
 練習用のファイルを作ります。
 
 ```bash
-echo "Gitの練習です" > template-docs/practice.txt
+echo "Gitの練習です" > docs/handson/practice.txt
 git status
 ```
 
@@ -90,7 +90,7 @@ git status
 ## 4. add して commit する（セーブ）
 
 ```bash
-git add template-docs/practice.txt
+git add docs/handson/practice.txt
 git status
 ```
 
@@ -108,14 +108,14 @@ git log --oneline
 ## 5. ファイルを修正して差分を見る
 
 ```bash
-echo "2行目を追加しました" >> template-docs/practice.txt
+echo "2行目を追加しました" >> docs/handson/practice.txt
 git diff
 ```
 
 `+` で始まる行が追加された部分です。確認できたらまたセーブします。
 
 ```bash
-git add template-docs/practice.txt
+git add docs/handson/practice.txt
 git commit -m "練習用ファイルに2行目を追加"
 ```
 
@@ -158,7 +158,7 @@ git branch -D practice/自分の名前                  # 手元のブランチ�
 git push origin --delete practice/自分の名前       # GitHub 上のブランチを削除
 ```
 
-`main` に戻ると `template-docs/practice.txt` は消えています（練習用ブランチにしか存在しないため）。
+`main` に戻ると `docs/handson/practice.txt` は消えています（練習用ブランチにしか存在しないため）。
 
 
 ## 困ったとき
