@@ -46,7 +46,8 @@ Codespaceの中身は`.devcontainer/devcontainer.json`で決まっています�
     "ghcr.io/devcontainers/features/python:1": {
       "version": "3.14",
       "toolsToInstall": "uv"
-    }
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {}
   },
   "containerEnv": {
     "TZ": "Asia/Tokyo",
@@ -59,6 +60,7 @@ Codespaceの中身は`.devcontainer/devcontainer.json`で決まっています�
 - Claude Code
 - Node.js 24 + pnpm
 - Python 3.14 + uv（`UV_LINK_MODE=copy`はCodespacesでのハードリンク警告を回避するための設定）
+- GitHub CLI（`gh`）：Codespacesでは認証済みの状態で使えるので、Claude Codeにプルリクエストの作成なども頼める
 - タイムゾーンはAsia/Tokyo
 
 ### カスタマイズ
