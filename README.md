@@ -27,7 +27,7 @@
   - Python 3.14 + uv（`UV_LINK_MODE=copy`はCodespacesでのハードリンク警告を回避するための設定）
 - Dockerは含まれていない。DB等をコンテナで動かす場合は`features`に`"ghcr.io/devcontainers/features/docker-in-docker:2": {}`を追加する
 - 設定変更後はコマンドパレットから「Codespaces: Rebuild Container」で反映する
-- ローカルPC、または Codespace 内で claude setup-token を実行しトークンを出力。トークン形式は`sk-ant-oat01-...`
+- ローカルPC、または Codespace 内のターミナルで、コマンド`claude setup-token` を実行しトークンを出力。トークン形式は`sk-ant-oat01-...`
 - 右上のプロフィール → Settings → 左メニュー Codespaces → 「Codespaces secrets」→ New secret → 名前 CLAUDE_CODE_OAUTH_TOKEN、値にトークンを入れ、「Repository access」で使うリポジトリを選択
 - CodespacesのターミナルでClaude Codeを起動
 
